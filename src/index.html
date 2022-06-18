@@ -1,13 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/style.css" rel="stylesheet" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body class="bg-pink-400">
+    <nav
+      class="md:flex md:justify-between bg-white shadow md:content-center p-5"
+    >
+      <div class="flex justify-between items-center">
+        <span class="text-2xl font-serif"
+          ><img
+            class="rounded-full h-10 inline"
+            src="https://unsplash.it/500"
+            alt=""
+          />
+          Site LOGO
+        </span>
+        <span class="text-3xl cursor-pointer md:hidden block">
+          <ion-icon name="menu" onclick="menuClick(this)"></ion-icon>
+        </span>
+      </div>
+      <ul
+        id="menu_list"
+        class="md:flex md:items-center z-[-1] md:z-auto md:static absolute 
+        bg-white md:bg-white w-full md:w-auto left-0 pl-7 md:pl-0 py-4 md:py-0 
+        md:opacity-100 opacity-100 top-[-400px] transition-all ease-in duration-500"
+      >
+        <li class="mx-4 my-6 md:my-0">
+          <a class="text-xl hover:text-pink-500 duration-500" href="">Home</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a class="text-xl hover:text-pink-500 duration-500 bg" href="">Blog</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a class="text-xl hover:text-pink-500 duration-500" href="">About</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a class="text-xl hover:text-pink-500 duration-500" href="">Doc</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a class="text-xl hover:text-pink-500 duration-500" href="">Info</a>
+        </li>
+        <button
+          class="bg-pink-400 py-1 px-5 rounded shadow-sm text-white hover:bg-pink-500 duration-500"
+        >
+          Get Start
+        </button>
+      </ul>
+    </nav>
+
+    <script>
+      menu_list = document.getElementById("menu_list");
+      function menuClick(arrg) {
+        arrg.name === "menu"
+          ? ((arrg.name = "close"),
+            menu_list.classList.add("top-[80px]"),
+            menu_list.classList.add("opacity-100"))
+          : ((arrg.name = "menu"),
+            menu_list.classList.remove("top-[80px]"),
+            menu_list.classList.remove("opacity-100"));
+      }
+
+      // menu_list=document.getElementById('menu_list')
+      // function menuClick(arrg){
+      //   if (arrg.name === 'menu'){
+      //     arrg.name='close';
+      //     menu_list.classList.add('top-[80px]')
+      //     menu_list.classList.add('opacity-100')
+      //     console.log(arrg.name)
+      //   }
+      //   if (arrg.name === 'close'){
+      //     arrg.name='menu';
+      //     menu_list.classList.remove('top-[80px]')
+      //     menu_list.classList.remove('opacity-100')
+      //     console.log(arrg.name)
+      //   }
+
+      // }
+    </script>
+  </body>
 </html>
