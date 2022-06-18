@@ -924,6 +924,11 @@ video {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
+  .md\:bg-orange-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+  }
+
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -935,6 +940,14 @@ video {
 
   .md\:opacity-100 {
     opacity: 1;
+  }
+
+  .md\:opacity-0 {
+    opacity: 0;
+  }
+
+  .md\:opacity-10 {
+    opacity: 0.1;
   }
 }
 
